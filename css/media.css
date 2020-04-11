@@ -4,7 +4,7 @@
 
 @media (max-width: 950px) {
   .menu {
-    width: 94%;
+    width: 96%;
     background: #FF7FED;
     background-color: #fff;
     float: right;
@@ -247,6 +247,11 @@ body > div > div.menu.effect2.active {
 
 body > div > div.menu.effect2.active > div > ul > li > a > h1 {
     font-size: 22px;
+}
+
+body > div > div.contains.effect5 > div > div > div > .text_block {
+    grid-template-columns: 2fr 1fr;
+
 }
 
 #content {

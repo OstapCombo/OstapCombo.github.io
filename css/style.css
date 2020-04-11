@@ -70,6 +70,84 @@ p {
 
 }
 
+/*Preloader*/
+
+.transition-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.transition-loader-inner {
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  width: calc(100% - 200px);
+  color: #FFF;
+  padding: 0 100px;
+  text-align: center;
+  label {
+    font-size: 1em;
+    padding: 1%;
+    opacity: 0;
+    display: inline-block;
+    &:after {
+      font-family: FontAwesome;
+      content: '\f111';
+    }
+  }
+}
+
+$key-frames-ms: 600ms, 500ms, 400ms, 300ms, 200ms, 100ms; 
+
+@each $current-ms in $key-frames-ms {
+    $i: index($key-frames-ms, $current-ms);
+    .transition-loader-inner label:nth-child(#{$i}) {
+      -webkit-animation: loader 3s $current-ms infinite ease-in-out;
+      animation: loader 3s $current-ms infinite ease-in-out;
+    }   
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px) scale(1);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px) scale(2);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px) scale(2);
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+  }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+  }
+}
+/* -------------*/
 #lang-icon {
   height: 100%;
   margin: 0;
@@ -401,7 +479,8 @@ h3.social-header {
 }
 
 body > div > div.menu.effect2 > div > div.pluso {
-  padding-bottom: 162px;
+  padding-bottom: 142px;
+  padding-top: 5px;
 }
 body > div > div.menu.effect2 > div > ul > div > ul > a > img {
   padding-right:  0px;
@@ -613,11 +692,11 @@ iframe.googlemaps {
 
 
 .inner_page {
-  border-radius:  0px 0px 10px 10px;
-  background-color:  #fff;
   height:  100%;
+  width:  100%;
+  background-color:  #fff;
   padding-bottom:  21px;
-  width:  100%;;
+  border-radius:  0px 0px 10px 10px;;
 }
 
   .contains {
@@ -736,40 +815,35 @@ body > div > div.contains.effect5 > div > div > div > div.rcolon {
   width:  36%;
 }
 
-body > div > div.contains.effect5 > div > div > div > .text_block { /*отступ снизу*/
-  width:100%; /*указываем общую ширину блока с колонками*/
-  text-align:justify; /*выравнивание текста внутри колонок*/
-  column-count: 3; /*количество колонок, на которое хотим разбить текст*/
-  -moz-column-count: 3; /*для мозилы*/
-  -webkit-column-count: 3; /*для webkit браузеров*/
-  column-gap: 40px; /*отступ между колонками*/
-  -moz-column-gap: 40px;
-  -webkit-column-gap: 40px;
-  column-rule: 1px solid #000; /*если требуется по дизайну, разделяем колонки линией*/
-  -moz-column-rule: 1px solid #000;
+body > div > div.contains.effect5 > div > div > div > .text_block { /*количество колонок, на которое хотим разбить текст*/
+  -moz-column-count: 3; /*отступ между колонками*/
+  -moz-column-gap: 40px; /*если требуется по дизайну, разделяем колонки линией*/
+  -moz-column-rule: 1px solid #000; /*количество колонок, на которое хотим разбить текст*/
   -webkit-column-rule: 1px solid #000;
 }
 
 
 body > div > div.contains.effect5 > div > div > div > .text_block {
-  width:  100%;
-  text-align:  justify;
-  columns: 100px 2;
+  display: grid;
   -moz-columns: 100px, 200px 2;
-  -webkit-columns: 100px, 200px 2;
 
-  column-count:  2;
+  -webkit-columns: 100px, 200px 2;
   -moz-column-count:  2;
-  -webkit-column-count:  2;
-  column-gap:  40px;
   -moz-column-gap:  40px;
-  -webkit-column-gap:  40px;
-  column-rule:  1px solid #000;
   -moz-column-rule:  1px solid #000;
-  -webkit-column-rule:  1px solid #000;
+  grid-template-rows: 8.45em 8.45em;
+  padding: 0px;
+  grid-template-columns: 2fr 1fr;
+  
 
 }
 
+body > div.wrapper > div.contains.effect5 > div > div > div > div > div.lcolon {
+  padding: 0.7em 5px;
+}
+body > div.wrapper > div.contains.effect5 > div > div > div > div > div.rcolon {
+  padding: 0.7em 5px;
+}
 body > div > div.contains.effect5 > div > div > .content-warp {
   width: 100%;
 }
@@ -871,11 +945,12 @@ body > div > div.contains.effect5.effect7 > footer {
 
 
 body > div > div.menu.effect2 > div > div:nth-child(2) > ul.contact_data li {
-  font-size: 10px;
+  font-size: 12px;
   list-style-type: none;
   width: 100%;
   list-style-position: outside;
   display: flex;
+  padding: 3px;
   /*margin-left: 0;*/
 
 
