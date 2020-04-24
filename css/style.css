@@ -13,7 +13,7 @@ body {
   width:  100%;
   background-color:  #edf6ff;
   margin:  0 auto;
-  font-family:  Verdana, Arial, Helvetica, sans-serif;
+  /*font-family:  Verdana, Arial, Helvetica, sans-serif;*/
   /*font-size: 12px;*/
   /*overflow-x:  hidden;*/
 }
@@ -34,9 +34,9 @@ font-weight: normal;
 
 h1 {
     margin: 3px 3px 3px;
-    font-size: 1.3em;
     letter-spacing: 0.06em;
-    font-family: 'Hobo';;
+    font-size: 1.3em;
+    font-family: 'Hobo'; 
 }
  
 h2, h3, h4, h5, h6 {
@@ -63,7 +63,6 @@ body > div > div.contains.effect5 > div > h2.album-title {
 
 a:visited {
     font-weight: 600;
-    font-family: 'Arial';
 }
 
 p {
@@ -219,7 +218,7 @@ p {
 
 
   z-index: auto;;;;; */ */;
-  padding-top:  15px;
+  padding-top:  17px;
 }
 
 #breadcrumb > a:nth-child(5) > span > b {
@@ -424,8 +423,8 @@ header {
     transition: all 1.3s ease 0s;
     width: 32.5%; 
     padding-bottom: -10px; 
-    float: right; 
-    top: -20px;
+    float: right; /* Меню сайта */
+    top: -17px;
     /*top: -100px;*/
 }
 body > div > div.menu.effect2 > div > ul > div > p > a > img {
@@ -504,6 +503,9 @@ nav ul :after{
 .side__link:hover{
   color: #75c3fd;
 }
+.side__link::active{
+  color: #75c3fd;
+}
 body > div > div.menu.effect2 > div > ul {
   border-top: 1px solid #D2E4F4;
   border-bottom: 1px solid #FFF;
@@ -512,9 +514,9 @@ body > div > div.menu.effect2 > div > ul > li:nth-child(1) {
   border-top:  1px solid #fff;
 }
 body > div > div.menu.effect2 > div > ul > li {
-    list-style: none;
     border-top: 1px solid #FFF;
     border-bottom: 1px solid #D2E4F4;
+    list-style: none;
 }
 
 
@@ -588,7 +590,13 @@ body > div.wrapper > div.menu.effect2 > div > div.contact_list > h3 {
 
 img.banner_constr {
   width:  100%;
-  
+  margin-top:  0.5em;
+  margin-bottom:  0.5em;;;
+
+}
+
+.side_menu {
+  /*font-family:  Verdana, Arial, Helvetica, sans-serif;*/
 }
 /*===============================================
   ------------------ Content --------------------
@@ -979,6 +987,18 @@ body > div.wrapper > div.menu.effect2 > div > div:nth-child(2) > ul > li:nth-chi
   flex-wrap: wrap;
   display: flex; /* or space-around */
 }
+.albums_row {
+  display:  inline;
+
+}
+
+body > div > div.contains.effect5 > div > div > a > figure > figcaption > h2 {
+  font-size: 1.7em;
+}
+body > div > div.contains.effect5 > div > div > a:nth-child(1) > figure {
+ width3;: 
+}
+
 
 #content > div > div.bx-wrapper > div.bx-viewport > ul > li {
   max-width:  100%;
@@ -986,13 +1006,21 @@ body > div.wrapper > div.menu.effect2 > div > div:nth-child(2) > ul > li:nth-chi
 }
 
 body > div > div.contains.effect5 > div > div > a {
+  text-decoration: none;
   margin-bottom: 8px;
   width: calc(50% - 4px);
+  display: inline-block;
+  color: black;
+}
+
+body > div > div.contains.effect5 > div > div > a.album_link {
   color: black;
   display: inline-block;
   text-decoration: none;
+  margin-bottom: 8px;
+  width: calc(46% - 0%);
+  margin-top: 22px;
 }
-
 
 
 body > div > div.contains.effect5 > div > div > a:hover img {
@@ -1010,18 +1038,22 @@ figcaption {
 
 body > div > div.contains.effect5 > div > div > a > figure > img {
   border: none;
-  max-width: 100%;
   transition: transform .7s ease-in-out;
-  object-fit: cover;
-  height: 93px;;
+  object-fit: cover;;
   background: #ccc;
   display: block;
-  width: 96%;
   margin: 0 2% 0px 2%;
+  height: 5.825em;
+  max-width: 100%;
+  width: 96%;
+}
+body > div > div.contains.effect5 > div > div > a > figure.ph_album > img {
+  height:  13em;
+
 }
 @media screen and (min-width: 30em) {
 body > div > div.contains.effect5 > div > div > a {
-    width: calc(33% - 6px);
+  width:  calc(33% - 6px);
   }
 }
 .p a {
