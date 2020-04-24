@@ -1,0 +1,15 @@
+
+@font-face {
+/*font-family: 'Cloister Black BT', arial;*/
+font-family: 'Deutsh Gothic';
+src: url("../fonts/OldOak.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+body  div.wrapper > div.menu.effect2 > div > ul > li > a > h1 {
+	/*font-family: 'Cloister Black BT', arial;*/
+	font-family: 'Deutsh Gothic';
+	font-size: 1.645em;
+	/*color: black;*/
+}
+

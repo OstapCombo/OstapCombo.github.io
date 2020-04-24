@@ -9,29 +9,51 @@
   zoom: 1;
   height: 100%;
   position: relative;
-  margin: 20px;
-  margin-bottom: 25px;
-  top: 1.2em;
 }
 .bx-wrapper img {
-  padding: 0px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 10px;
-  padding-bottom: 43px;
+  margin-left: 0%;
+  margin-right: 0%;
   position: relative;
   max-width: 100%;
+  width: 100%;
+  min-width: 100%;
+  margin-top: 0;
+}
 
+@media (max-width: 950px) {
+#content {
+    margin-right: 2%;
+    margin-left: 2%;
+    transition: all 0.7s ease 0s;
+    z-index: 1;
+    margin-bottom: 10px;
+    min-width: 96%;
+    max-width: 96%;
+    margin-top: 15px;
+    position: relative;
+}
 }
 .bxslider {
-  padding: 0;
   /*fix flickering when used background-image instead of <img> (on Chrome)*/
   -webkit-perspective: 1000;
-  margin-bottom: 0;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  width: 100%;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  margin-right: auto;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  margin-left: auto;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  position: absolute;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  padding: 0;
 }
 ul.bxslider {
   list-style: none;
-  height: 100%;
+}
+.bx-wrapper .bx-pager {
+    /* color: #666; */
+    position: absolute;
+    bottom: -21px;
 }
 .bx-viewport {
   /* fix other elements on the page moving (in Chrome) */
@@ -43,13 +65,12 @@ ul.bxslider {
 ===================================*/
 .bx-wrapper {
   -moz-box-shadow: 0 0 5px #ccc;
-   margin-right: auto;
   margin-left: auto;
-  margin: 20px;
+  margin-right: auto;
+  position: relative;
+  max-height: 630px;
   top: 1.2em;
-  margin-top: auto;
-  margin-bottom: 25px;
-  max-height: 630px; 
+  margin-top: 0; 
   /* border: 5px solid #fff; */
   /* margin-right: auto; */
   /* border: 5px solid #fff; */
@@ -75,9 +96,8 @@ ul.bxslider {
 .bx-pager.bx-default-pager {
     position: absolute;
     /*top:px;*/
-
-
 }
+
 .bx-wrapper .bx-pager {
   font-weight: bold;
   font-family: Arial;
@@ -185,7 +205,7 @@ ul.bxslider {
   height: 0;
   padding: 0;
   margin: 0;
-  position: absolute;;;
+  position: absolute;
 }
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
@@ -214,11 +234,6 @@ ul.bxslider {
     /* height: 10px; */
 }
 .bx-wrapper .bx-pager {
-    /* font-weight: bold; */
-    /* text-align: center; */
-    /* font-family: Arial; */
-    /* margin-bottom: 0px; */
     /* color: #666; */
     position: absolute;
-    bottom: 27px;
 }

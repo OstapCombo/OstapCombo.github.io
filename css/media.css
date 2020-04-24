@@ -3,12 +3,32 @@
     ===============================================*/
 
 @media (max-width: 950px) {
+  header {
+    position:fixed;
+    height:52px; 
+  }
+
+  .header__body {
+  }
+
+  #home {
+    left:14px;
+    bottom: : 10px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+  }
+  .wrapper {
+    position: relative;
+    top: 33px;
+    margin-bottom: 33px;
+  }
+
   .menu {
     width: 96%;
-    background: #FF7FED;
     background-color: #fff;
     float: right;
     top: -680px;
+    background: #FF7FED;
   }
   .bx-wrapper {
   max-height:  1200px;
@@ -22,24 +42,53 @@
     margin-right: 2%;
     width: 96%;
   }
+.language {
+     margin-top: 1px;
+     margin-left: inherit;
+     margin-right: 53px;
+     position: relative;
+}
 
+nav.language {
+}
+.language img {
+/*    margin-left: 5px;
+    margin-top: 3px;*/
+    position: relative;
+}
+.language_start {
+    margin-left: 10px;
+    text-align: right;
+    border-radius: 10%;
+    margin-bottom: auto;
+    position: absolute;
+    float: left;
+    display: block;
+    height: 20px;
+    margin-top: 2px;;
+}
+
+.language_start img {
+    margin-left: 5px;
+    margin-top: 3px;
+    position: relative;
+}
   /*===============================================
     --------------- Menu Button -------------------
     ===============================================*/
 
   .header__burger{
     z-index:  4px;
-    position: relative;
-    width: 28px;
-    display: block;
-    float: right;
-    height: 20px;
-    margin-right: 10px;
-    border-radius: 10%;
     margin-bottom:  auto;
+    margin-bottom: auto;
+    display:  block;
+    position:  relative;
+    width:  28px;
+    height:  20px;
+    border-radius:  10%;
     margin-left:  inherit;
-    margin-top:  7px;
-    margin-bottom: auto; 
+    margin-right:  10px;
+    margin-top:  11px; 
   }
 
   .header__burger span {
@@ -55,7 +104,6 @@
   }
 
   .header__burger:before{
-    content: '';
     background-color: #57D;
     margin-top: 18px;
     position: absolute;
@@ -64,6 +112,7 @@
     border-radius: 5px;
     left: 0;
     transition: all 0.3s ease 0s;
+    content: '';
   }
   .header__burger:after {
     content: '';
@@ -125,24 +174,18 @@
   .inner_content { 
     border-radius: 0px 0px 10px 10px; 
     height: 100%; 
+    position: relative; 
     padding-bottom: 20px; 
-    width: 100%; 
-    background-color: #fff;
+    background-color: #fff; 
+    padding: 0.5% 3% 0% 3%;;
+    /* padding: 0.5% 3% 0% 3%; */;
   }
   .bx-wrapper img {
-     /*display: block; */
-    margin-left: 3%;
-    /* display: block; */
     padding-bottom: 43px;
-    margin-bottom: 10px; 
-    margin-right: 3%;
-     /*display: block; */
-    min-width: 94%;
-     /*display: block; */
-    max-width: 99%;
-     /*display: block; */
+    margin-bottom: 10px;
     position: relative;
-    /* display: block; */
+    max-width: 100%;
+    min-width: 95%;
   }
   .bx-wrapper .bx-pager {
     /* font-weight: bold; */
@@ -151,7 +194,12 @@
     /* margin-bottom: 0px; */
     /* color: #666; */
     position: absolute;
-    bottom: 10px;
+    /* font-weight: bold; */
+    /* text-align: center; */
+    /* font-family: Arial; */
+    /* margin-bottom: 0px; */
+    /* color: #666; */
+    bottom: 31px;
   }
   /*===============================================
     --------------- Media Queries -----------------
@@ -165,15 +213,14 @@
   }
 
   #content {
-    margin-right: 3%;
-    margin-left: 3%;
     transition: all 0.7s ease 0s;
     z-index: 1;
-    margin-bottom: 10px;
-    min-width: 94%;
-    max-width: 100%;
     margin-top: 15px;
     position: relative;
+    margin-bottom: 10px;
+    width: 96%;
+    margin-right: 2%;
+    margin-left: 2%;
   }
   
   #contains {
@@ -202,18 +249,52 @@
   .page {
     position: relative;
   }
+
+
+  #home {
+    margin-top:10px;
+
+}
+.header__burger {
+    margin-top: 15px;
+
+}
+nav.language {
+    margin-top:1px;
+
+}
+#home > img {
+    margin-top: 0px;
+    margin-bottom: auto;
+}
 }
 
+
+
+
+
+
+
+
 @media (max-width: 650px) {
+div.menu.effect2 > div > ul > div > ul > a > img {
+  width: 60px;
+  height: 60px;
+}
+
+body > header > div > .header__body {
+}
+
+
 .menu > div > ul > div > p {
   margin:  0;
   text-align:  -webkit-right;
 }
 .menu {
   float: right;
-  top: -680px;
   width: 96%;
   transition: all 1.2s ease 0s;
+  top: -680px;
   z-index: 3;
 }
 
@@ -230,19 +311,18 @@
 .side_menu {
     border-radius: 0px 0px 10px 10px;
     padding-bottom: 20px;
-    position: fixed;
     max-height: 600px;
     width: 82%;
 }
 
 body > div > div.menu.effect2.active {
-    z-index: 3;
     transition: all 1.2s ease 0s;
     top: -19px;
     position: relative;
     margin-left: 2%;
     margin-right: 2%;
     width: 96%;
+    z-index: 3;
 }
 
 body > div > div.menu.effect2.active > div > ul > li > a > h1 {
@@ -250,27 +330,38 @@ body > div > div.menu.effect2.active > div > ul > li > a > h1 {
 }
 
 body > div > div.contains.effect5 > div > div > div > .text_block {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
+    display: inline-block;
 
+}
+
+
+body > div > div.contains.effect5 > div > div > div > form > div.contact-grid {
+    grid-template-columns: 1fr;
 }
 
 #content {
-  min-width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    min-width: 94%;
+    max-width: 100%;
+    position: relative;
     margin-bottom: 10px;
-  /*position: absolute;*/
-  max-width: 100%;
-  margin-top: 15px;
+}
+.effect5:before, .effect5:after { 
+  background-color: rgba(155, 155, 155, 0); 
+  bottom: 103px;
+}
+.effect2:before, .effect2:after {
+    background-color:rgba(155, 155, 155, 0); 
 }
 
-
 #content > .inner_content { 
-  background-color: #fff; 
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px; 
+  width: 100%; 
   padding-bottom: 20px; 
-  height: 100%; 
-  width: 100%;
+  padding: 0 0 14px 0px; 
+  background-color: rgba(155, 155, 155, 0);
 }
 
 
@@ -280,9 +371,6 @@ body > div > div.contains.effect5 > div > div > div > .text_block {
   background-color:  #fff;
   }
 #content > div > div.brand > img {
-    position: absolute;
-    width: 24%;
-    margin: 9% 0px 0px 10%;
 }
 
   h1.br-title {
@@ -291,15 +379,10 @@ body > div > div.contains.effect5 > div > div > div > .text_block {
       font-size: 2em;
   }
 #content > div > div.brand > .brand-title {
-    position: absolute;
-    margin: 8% 25.9% 0px 34.1%;
-    color: #fff;
-    font-size: 17px;
-    width: 40%;
 }
 
 #content > div > div.brand > div > span {
-  font-size: 13px;
+    font-size:13px;
 }
 #content > div > div.bx-wrapper > div.bx-controls.bx-has-pager {
   position: relative;
@@ -328,9 +411,9 @@ body > div > div.contains.effect5 > div > div > div > .text_block {
     margin-bottom: 10px;
     padding-bottom: 0px;
     padding: 0px;
-    margin-left: 3%;
-    margin-right: 3%;
-    max-width: 94%;
+    margin-left: 0%;
+    margin-right: 0%;
+    max-width: 100%;
 }
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
@@ -349,11 +432,10 @@ body > div > div.contains.effect5 > div > div > div > .text_block {
 }
 
 .inner_content { 
-  background-color: #fff; 
-  border-radius: 0px 0px 10px 10px; 
   width: 100%; 
-  min-height: 320px; 
-  margin-top: 0;
+  margin-top: 0; 
+  background-color: #fff; 
+  min-height: 320px;
 }
 }
 
@@ -389,6 +471,7 @@ body > div > div.contains.effect5 > div > div > div > .text_block {
     font-size: 22px;
   }
   #content > div > div.brand > div > span {
-    font-size: 10px;
+    font-size: 14px;
+    margin-left: 0px;
   }
 }

@@ -10,14 +10,24 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
   <header>
     <div class="header-wrapper">
       <div class="header__body">
-        <nav class="language">
+        <nav class="language_start">
           <div id="lang-icon">
-            <a href="#"><img src="ru.bmp" alt="Русский"></a>
-            <a href="#"><img src="en.bmp" alt="English"></a>
-            <a href="#"><img src="de.bmp" alt="Deutcsh"></a>
+            <a href="ru/index.html"><img src="img/ru.bmp" alt="Русский" title="Русский"></a>
+            <a href="en/index.html"><img src="img/en.bmp" alt="English" title="English"></a>
+            <a href="#"><img src="img/de.bmp" alt="Deutcsh" title="Deutcsh" id="lang_active"></a>
+
+<!--             <a href="#"><img src="img/ru.bmp" alt="Русский"></a>
+            <a href="#"><img src="img/en.bmp" alt="English"></a>
+            <a href="#"><img src="img/de.bmp" alt="Deutcsh"></a> -->
           </div>
         </nav>
         <div class="header__burger">
@@ -45,11 +55,11 @@
                 <a href="#"><img src="photos/glass/0008_t.jpg" alt="" width="68" height="68" class="tmb" /></a>
                 <a href="#"><img src="photos/glass/0007_t.jpg" alt="" width="68" height="68" class="tmb" /></a>
               </ul>
-              <p class="right"><a href="#" class="lnk">mehr</a></p>
+              <p class="right"><a href="#" class="lnk">mehr<img src="img/ico_nav_sml.png" alt=""></a></p>
             </div>
 
             <li>
-              <a href="#" class="side__link"><h1>Wandmalerei</h1></a>
+              <a href="wand.html" class="side__link"><h1>Wandmalerei</h1></a>
             </li>
 
             <div class="clearfloat">
@@ -61,11 +71,11 @@
                 <a href="#"><img src="photos/wall/0005_t.jpg" alt="" width="68" height="68" class="tmb" /></a>
                 <a href="#"><img src="photos/wall/0006_t.jpg" alt="" width="68" height="68" class="tmb" /></a>
               </ul>
-              <p class="right"><a href="#" class="lnk">mehr</a></p>
+              <p class="right"><a href="#" class="lnk">mehr<img src="img/ico_nav_sml.png" alt=""></a></p>
             </div>
 
             <li>
-              <a href="about.html" class="side__link"><h1>Üeber die Künstlerin</h1></a>
+              <a href="about.html" class="side__link"><h1>Über die Künstlerin</h1></a>
             </li>
             <li>
               <a href="blog.html" class="side__link"><h1>Blog</h1></a>
@@ -80,9 +90,10 @@
     <div id="content" class="effect5">
       <div class="inner_content">
         <div class="brand">
-          <img src="img/logo.png" alt="">
+          <img src="img/full_logo.png" alt="">
           <div class="brand-title">
-            <h1 class="br-title">GLASMALEREI</h1>
+
+            <!-- <h1 class="br-title">GLASMALEREI</h1> -->
             <span>von Aljona Voronova</span>
           </div>
         </div>
@@ -98,14 +109,26 @@
       </div>
     </div>
       <footer class="footer">
-        <div class="inner-footer">Copyright © 2013. All Rights Reserved. All images and arts by <a href="contact.html">Aljona Voronova</a>.</div>
+        <div class="inner-footer">Copyright © 2020. All Rights Reserved. All images and arts by <a href="contact.html">Aljona Voronova</a>.</div>
       </footer>
     </div>
 
-
+<script>
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+</script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
+<!--     <script>
+        $(document).ready(function(){
+            $('.inner_content').fadeIn(5000);
+        });
+    </script> -->
 <!-- bxSlider Javascript file -->
 <script src="js/jquery.bxslider.js"></script>
 <script src="js/custom.js"></script>
